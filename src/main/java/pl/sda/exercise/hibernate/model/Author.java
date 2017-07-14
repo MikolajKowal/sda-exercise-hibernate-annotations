@@ -21,8 +21,7 @@ import javax.persistence.Table;
 })
 public class Author {
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name="author_id")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="bookAuthor")
 	private Set<Book> books;
 	
 	public Set<Book> getBooks() {
