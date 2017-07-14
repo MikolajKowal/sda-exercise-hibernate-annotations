@@ -10,7 +10,8 @@ public class Hibernate08 {
 	public static void main(String[] args) {
 		BookService bookService = new BookService();
 		System.out.println("Books:");
-		bookService.getBooks().forEach(book -> System.out.println(book + "; " + book.getAuthor()));
+		bookService.getBooks()
+		.forEach(book -> System.out.println(book + "; " + book.getBookAuthor()));
 	}
 
 }
