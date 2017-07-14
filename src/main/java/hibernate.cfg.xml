@@ -12,6 +12,7 @@
         
         <mapping class="pl.sda.exercise.hibernate.model.Book"></mapping>
         <mapping class="pl.sda.exercise.hibernate.model.Author"></mapping>
+        <mapping class="pl.sda.exercise.hibernate.model.Category"></mapping>
     </session-factory>
     
 </hibernate-configuration>
