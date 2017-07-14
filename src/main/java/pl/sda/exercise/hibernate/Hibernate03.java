@@ -9,7 +9,7 @@ public class Hibernate03 {
 
 	public static void main(String[] args) {
 		BookService bookService = new BookService();
-		int id = 1;
+		int id = 3;
 		System.out.println("Book by id:" + bookService.getBookById(id));
 	}
 

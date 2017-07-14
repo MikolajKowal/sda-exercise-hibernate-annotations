@@ -13,7 +13,8 @@ import javax.persistence.Table;
 @Table(name="book")
 @NamedQueries(value={
 		@NamedQuery(name="ourQueryForAllBooks", query="from Book"),
-		@NamedQuery(name="countBooksQuery", query="select count(*) from Book")
+		@NamedQuery(name="countBooksQuery", query="select count(*) from Book"),
+		@NamedQuery(name="getById", query="from Book b where b.id = :id")
 })
 public class Book {
 
