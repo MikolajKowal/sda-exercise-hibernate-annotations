@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import pl.sda.exercise.hibernate.model.Book;
 
@@ -29,8 +30,11 @@ public class BookService {
 	}
 
 	public long countBooks() {
-		//TODO
-		return 0;
+		Session session = sessionFactory.openSession();
+		Query<Long> query = session.createNamedQuery("countBooksQuery", Long.class);
+		Long uniqueResult = query.uniqueResult();
+		session.close();
+		return uniqueResult;
 	}
 
 	public List<Book> getBookById(int id) {
